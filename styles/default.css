@@ -1,8 +1,8 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(23, 21, 27);
-    color: rgb(234, 234, 234)
+    background: linear-gradient(-53deg, rgb(73, 60, 82), rgb(23, 21, 27));
+    color: rgb(234, 234, 234);
 }
 
 a {
@@ -10,14 +10,21 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: dotted;
+}
+
 a:hover {
     color: darkred;
     text-decoration: underline;
 }
 
+h2, figure {
+    text-align: center;
+    margin: 20px auto;
+}
 img {
     width: 20%;
-    margin: 20px 20%;
     border: solid 1px red;
 }
 
