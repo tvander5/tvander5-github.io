@@ -17,6 +17,10 @@ header, footer {
     text-align: center;
 }
 
+header nav {
+    padding-bottom: 25px;
+}
+
 a
 {
     color: rgb(251, 255, 27);
@@ -81,7 +85,7 @@ footer {
 }
 
 footer ul {
-    padding: 20px;
+    padding: 10px;
     display: inline-flex;
     list-style: none;
 }
