@@ -13,6 +13,10 @@ body
     width: 70%;
 }
 
+img {
+    border: solid 1px rgb(206, 206, 206);
+}
+
 header, footer {
     text-align: center;
 }
@@ -66,7 +70,7 @@ a:hover
 {
     color: rgb(255, 153, 36);
     text-shadow: 2px;
-    text-decoration: line-through;
+    text-decoration: overline;
 }
 
 h2, figure
