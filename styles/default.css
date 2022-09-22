@@ -73,7 +73,6 @@ nav {
 a:hover
 {
     color: rgb(255, 153, 36);
-    text-shadow: 2px;
     text-decoration: overline underline;
 }
 
