@@ -68,3 +68,14 @@ figcaption
 {
     font-style: italic;
 }
+
+
+footer ul {
+    padding: 20px;
+    display: flex;
+    list-style: none;
+}
+
+footer ul li {
+    padding: 0 20px;
+}
