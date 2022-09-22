@@ -69,10 +69,13 @@ figcaption
     font-style: italic;
 }
 
+footer {
+    margin: 0 auto;
+}
 
 footer ul {
     padding: 20px;
-    display: flex;
+    display: inline-flex;
     list-style: none;
 }
 
