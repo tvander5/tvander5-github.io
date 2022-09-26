@@ -48,6 +48,11 @@ hr
     border: dashed;
 }
 
+.about_us {
+    text-transform: uppercase;
+    list-style-image: linear-gradient(gold, orange);
+}
+
 p
 {
     padding: 0px 15px;
