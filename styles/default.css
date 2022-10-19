@@ -17,6 +17,11 @@ body
     width: 70%;
 }
 
+.colors {
+    font-weight: bold;
+    font-style: italic;
+}
+
 img {
     border: solid 1px rgb(206, 206, 206);
 }
