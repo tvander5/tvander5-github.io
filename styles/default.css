@@ -126,3 +126,31 @@ footer img {
     display: block;
     margin: 0 auto;
 }
+
+.green {
+    color: limegreen;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.orange {
+    color: orange;
+}
+
+.purple {
+    color: magenta;
+}
