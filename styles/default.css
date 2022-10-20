@@ -20,6 +20,16 @@ body
 .colors {
     font-weight: bold;
     font-style: italic;
+    color: rgb(235, 235, 235);
+}
+
+.italics {
+    font-style: italic;
+}
+
+.question {
+    font-weight: bold;
+    color: rgb(235, 235, 235);
 }
 
 img {
