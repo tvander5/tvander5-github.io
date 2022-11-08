@@ -148,3 +148,11 @@ footer ul a {
 .purple {
     color: magenta;
 }
+
+.calculator {
+    text-align: center;
+}
+
+.calculator input {
+    width: 30px;
+}
