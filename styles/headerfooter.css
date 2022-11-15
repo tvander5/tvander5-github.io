@@ -48,7 +48,7 @@ header {
   padding: 5px;
 }
 
-.navbar a:hover {
+nav a:hover {
   background: rgb(255, 109, 109);
   background: linear-gradient(to right, rgb(255, 154, 87),rgb(255, 109, 109));
   color: black;
