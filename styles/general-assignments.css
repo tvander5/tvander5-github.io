@@ -108,12 +108,11 @@ table tr td a:hover {
   text-decoration: none;
 }
 
-.website-info h2
+.website-info h4
 {
-  padding: .5em 0;
-  color: rgb(255, 109, 109);
+  font-size: 1.1em;
+  padding-top: .5em;
   text-align: center;
-  text-decoration: underline;
 }
 
 
