@@ -34,6 +34,15 @@
   width: 100%;
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: solid 1px rgb(255,255,255,.2);
+}
+
+#mod1 tr {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#mod2 tr {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -41,18 +50,19 @@
   background: linear-gradient(to right, rgb(255, 154, 87),rgb(255, 109, 109));
   border-radius: 10px;
   color: white;
+  border: none;
 }
 
 .module table tr td {
   text-align: center;
-  font-size: .95em;
+  font-size: .9em;
   padding: 5px 0;
 }
 
 .module table tr:nth-child(1) td {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: .95em;
   padding: 2px 0;
 }
 
