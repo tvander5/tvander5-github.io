@@ -67,7 +67,7 @@
 }
 
 /* For smaller screens */
-@media (max-width:700px) {
+@media (max-width:1000px) {
   .website-info {
     width: 90vw;
   }
@@ -80,7 +80,7 @@
   }
 }
 /* For smaller screens */
-@media (max-width:400px) {
+@media (max-width:600px) {
   .module table tr td {
     padding: 15px;
   }
