@@ -73,7 +73,7 @@ footer {
 }
 
 .validation img {
-  width: 60px;
+  min-width: 30px;
 }
 
 #validation-1 {
@@ -83,7 +83,7 @@ footer {
 }
 #validation-2 {
   position: absolute;
-  right: 2px;
+  right: 0;
   top: 8px;
 }
 
@@ -151,7 +151,14 @@ footer p a {
   footer p {
     display: none;
   }
-  .validation {
-    display: none;
+  .validation img {
+    width: 60%;
+  }
+}
+
+/* For smaller screens */
+@media (max-width:800px) {
+  .validation img {
+    display:none;
   }
 }
