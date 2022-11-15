@@ -1,0 +1,106 @@
+.website-info {
+  margin: 0 auto;
+  width: 60%;
+}
+
+p
+{
+  padding: .5em 0;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+.colors {
+  color: rgb(235, 235, 235);
+  text-transform: uppercase;
+  font-size: .8em;
+  line-height: 1.5em;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.colors li {
+  font-size: 15px;
+  text-align: center;
+  list-style: none;
+}
+
+.italics {
+  font-style: italic;
+  padding-left: 0;
+}
+
+.question {
+  font-weight: bold;
+  padding-left: 0;
+}
+
+a
+{
+  color: rgb(255, 109, 109);
+  text-decoration: none;
+}
+
+.website-info h2
+{
+  padding: .5em 0;
+  color: rgb(255, 109, 109);
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+.green {
+  color: limegreen;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.cyan {
+  color: cyan;
+}
+
+.orange {
+  color: orange;
+}
+
+.purple {
+  color: magenta;
+}
+
+.calculator {
+  text-align: center;
+}
+
+.calculator input {
+  width: 30px;
+}
+
+/* For smaller screens */
+@media (max-width:1150px) {
+  .website-info {
+    width: 75%;
+    font-size: 1.1em;
+  }
+}
+
+/* For smaller screens */
+@media (max-width:700px) {
+  .website-info {
+    width: 90%;
+  }
+  p {
+    font-size: 1em;
+  }
+}

@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang=""en>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles/default.css">
-        <title>Tony Vanderhall's Talkative Vulture | CP-C0-01</title>
-    </head>
-    <body>
-        <div data-include="components/header.html"></div>
-        <main>
-            <h2>Introduction</h2>
-            <figure>
-                <img class="me" src="images/photo-of-me.jpg" alt="Tony Vanderhall">
-                <figcaption>Doing something in IT</figcaption>
-            </figure>
-            <ul>
-                <li><strong>Personal background</strong>:  I program and create music in my free time. I also work part-time at Ross.</li>
-                <li><strong>Academic background</strong>:  I was an early graduate from Independence High School in Charlotte, NC.</li>
-                <li><strong>Background in this subject</strong>:  I've been programming since 6th grade learning various different programming languages such as: Golang, Python, C++, Lua, HTML & CSS, and a small amount of Rust. I have 350 points so far on <a href="https://www.freecodecamp.org/tvander5">freeCodeCamp</a></li>
-                <li><strong>Primary Computer Platform</strong>:  I use windows mainly though we have a couple raspberry pi's at home.</li>
-                <li><strong>Courses I'm Taking & Why</strong>: CRO7000-01: CO Programming : To become a full stack developer.</li>
-                <li><strong>Funny/Interesting item about yourself</strong>:  I'm really good at problem solving which is why I started programming in the first place.</li>
-            </ul>
-        </main>
-        <div data-include="components/footer.html"></div>
-        <script src="scripts/HTMLinclude.js"></script>
-    </body>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/introduction.css">
+    <link rel="stylesheet" href="styles/headerfooter.css">
+  </head>
+  <body>
+    <div w3-include-html="components/header.html"></div>
+    <main>
+      <h2 class="website-title">Introduction</h1>
+      <div class="website-info">
+        <figure class="my-bio">
+          <img src="images/photo-of-me.jpg" alt="Tony Vanderhall">
+          <figcaption>Doing something in IT</figcaption>
+        </figure>
+        <ul>
+            <li><strong>Personal background</strong>:  I program and create music in my free time. I also work part-time at Ross.</li>
+            <li><strong>Academic background</strong>:  I was an early graduate from Independence High School in Charlotte, NC.</li>
+            <li><strong>Background in this subject</strong>:  I've been programming since 6th grade learning various different programming languages such as: Golang, Python, C++, Lua, HTML & CSS, and a small amount of Rust. I have 350 points so far on <a href="https://www.freecodecamp.org/tvander5">freeCodeCamp</a></li>
+            <li><strong>Primary Computer Platform</strong>:  I use windows mainly though we have a couple raspberry pi's at home.</li>
+            <li><strong>Courses I'm Taking & Why</strong>: CRO7000-01: CO Programming : To become a full stack developer.</li>
+            <li><strong>Funny/Interesting item about yourself</strong>:  I'm really good at problem solving which is why I started programming in the first place.</li>
+        </ul>
+      </div>
+    </main>
+    <div w3-include-html="components/footer.html"></div>
+  </body>
+  <script src="scripts/HTMLInclude.js"></script>
 </html>

@@ -1,0 +1,81 @@
+.website-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.module {
+  width: 100%;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module h3 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.module table {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(30, 28, 39);
+  border-radius: 15px;
+}
+
+.module table tr {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.module table tr:nth-child(1) {
+  background: linear-gradient(to right, rgb(255, 154, 87),rgb(255, 109, 109));
+  border-radius: 10px;
+  color: white;
+}
+
+.module table tr td {
+  text-align: center;
+  font-size: .95em;
+  padding: 5px 0;
+}
+
+.module table tr:nth-child(1) td {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4em;
+  padding: 2px 0;
+}
+
+.module table tr td a {
+  color: rgb(205, 205, 205);
+  text-decoration: none;
+}
+
+.module table tr td a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* For smaller screens */
+@media (max-width:700px) {
+  .website-info {
+    width: 90%;
+  }
+  .module table tr td {
+    font-size: .9em;
+  }
+  
+  .module table tr:nth-child(1) td {
+    font-size: 1.2em;
+  }
+}

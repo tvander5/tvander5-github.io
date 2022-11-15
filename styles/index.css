@@ -1,0 +1,110 @@
+.website-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 10px;
+
+  width: 60%;
+  margin: 0 auto;
+}
+
+.info-card {
+  background-color: rgb(255, 109, 109);
+  background-image: url("/images/vulture.jpg");
+  background-position: center;
+
+  width: 300px;
+  height: 300px;
+  
+  min-width: 300px;
+  min-height: 300px;
+
+  border: solid 3px rgb(255, 109, 109);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 15px;
+
+}
+
+.info-card h3 {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 1.9em;
+  text-shadow: 2px 2px 10px rgba(0,0,0,1);
+
+}
+
+.info-card p {
+  text-align: center;
+  padding-top: 50px;
+  width: 100%;
+  color: rgb(30, 30, 33);
+  font-weight: 700;
+  font-size: 1.3em;
+  text-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.steps li {
+  list-style:disc;
+  transition: color .3s;
+}
+
+.steps li:hover {
+  color:rgb(255, 109, 109);
+}
+
+/* For smaller screens */
+@media (max-width:850px) {
+  .website-info {
+    width: 70%;
+  }
+  .info-card {
+    width: 250px;
+    height: 250px;
+
+    min-width: 250px;
+    min-height: 250px;
+  }
+  .steps {
+    width: 250px;
+    min-width: 250px;
+  }
+  .steps li {
+    font-size: .9em;
+  }
+}
+
+/* For smaller screens */
+@media (max-width:700px) {
+  .website-info {
+    flex-direction: column;
+  }
+  .info-card {
+    width: 300px;
+    height: 300px;
+  }
+  .steps {
+    padding-top: 20px;
+    width: 350px;
+  }
+  .steps li {
+    font-size: 1.1em;
+  }
+}

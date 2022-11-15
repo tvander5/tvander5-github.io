@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles/default.css">
-        <title>Tony Vanderhall's Talkative Vulture | CP-C0-01</title>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/general-assignments.css">
+    <link rel="stylesheet" href="styles/headerfooter.css">
     </head>
     <body>
-        <div data-include="components/header.html"></div>
-        <main>
+        <div w3-include-html="components/header.html"></div>
+        <h2 class="website-title">Colors</h1>
+        <div class="website-info">
             <h2>Learning About Colors</h2>
             <p>Allows you to tell which primary colors were mixed to together.</p>
 
@@ -18,32 +19,35 @@
                 <li class="yellow">Yellow</li>
             </ul>
 
+            <h2>Color Table</h2>
             <p>Secondary colors are colors that can be mixed from other colors.</p>
             <ul class="colors">
                 <li class="orange">Orange</li>
                 <li class="purple">Purple</li>
                 <li class="green">Green</li>
             </ul>
-            <h2>Color Table</h2>
             <ul class="colors">
-                <li class="orange">Orange</li>
-                <ul>
-                    <li class="red">Red</li>
-                    <li class="yellow">Yellow</li>
-                </ul>
-                <li class="purple">Purple</li>
-                <ul>
-                    <li class="red">Red</li>
-                    <li class="blue">Blue</li>
-                </ul>
-                <li class="green">Green</li>
-                <ul>
-                    <li class="cyan">Cyan</li>
-                    <li class="yellow">Yellow</li>
-                </ul>
+                <li>---
+                    <ul>
+                        <li class="red">Red</li>
+                        <li class="yellow">Yellow</li>
+                    </ul>
+                </li>
+                <li>---
+                    <ul>
+                        <li class="red">Red</li>
+                        <li class="blue">Blue</li>
+                    </ul>
+                </li>
+                <li>---
+                    <ul>
+                        <li class="cyan">Cyan</li>
+                        <li class="yellow">Yellow</li>
+                    </ul>
+                </li>
             </ul>
-        </main>
-        <div data-include="components/footer.html"></div>
+        </div>
+        <div w3-include-html="components/footer.html"></div>
         <script src="scripts/HTMLinclude.js"></script>
     </body>
 </html>

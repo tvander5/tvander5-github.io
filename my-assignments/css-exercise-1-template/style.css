@@ -1,0 +1,31 @@
+
+body {
+  background-color: #CBE3E8;
+  color: rgb(22, 21, 24);
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+.brownie-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.recipe {
+  font-size: 30px;
+}
+
+ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu {
+  border: solid 1px black;
+  padding: 6px 20px;
+  margin: 6px 0;
+  display: inline-block;
+}

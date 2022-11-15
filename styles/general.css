@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 60px 0;
+  padding-bottom: 150px;
+  background-color: rgb(44, 44, 59);
+  color: rgb(213, 213, 213);
+  overflow-y: scroll;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+}
+
+.website-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,32 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles/default.css">
-        <title>Tony Vanderhall's Talkative Vulture | CP-C0-01</title>
-    </head>
-    <body>
-        <div data-include="components/header.html"></div>
-        <main>
-            <h2>Assignments</h2>
-            <ul>
-                <li>WEEK 1 <ul>
-                    <li><a href="pre-assessment.html">Pre-Assessment</a></li>
-                    <li><a href="colors.html">Colors</a></li>
-                    <li><a href="my-assignments/css-exercise-1-template/index.html">Brownies</a></li>
-                </ul></li>
-                <li>WEEK 2 <ul>
-                    <li><a href="my-assignments/js-data-types-template/index.html">JS Data Types</a></li>
-                    <li><a href="my-assignments/js-fundamentals-template/index.html">JS Fundamentals</a></li>
-                </ul></li>
-                <li>WEEK 3 <ul>
-                    <li><a href="my-assignments/js-dom-lecture-activity/index.html">JS DOM Lecture Activity</a></li>
-                    <li><a href="my-assignments/lms/index.html">JS LMS Exercise 1</a></li>
-                    <li><a href="my-assignments/calculator/index.html">JS Calculator Exercise 1</a></li>
-                </ul></li>
-            </ul>
-        </main>
-        <div data-include="components/footer.html"></div>
-        <script src="scripts/HTMLinclude.js"></script>
-    </body>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/assignments.css">
+    <link rel="stylesheet" href="styles/headerfooter.css">
+  </head>
+  <body>
+    <div w3-include-html="components/header.html"></div>
+    <main>
+      <h2 class="website-title">Assignments</h1>
+      <div class="website-info">
+        <div class="module">
+          <h3>Module 1</h3>
+          <table>
+            <tr>
+              <td>Week 1</td>
+              <td>Week 2</td>
+              <td>Week 3</td>
+            </tr>
+            <tr>
+              <td><a href="pre-assessment.html">Pre-Assessment</a></td>
+              <td><a href="my-assignments/js-data-types-template/index.html">JS Data Types</a></td>
+              <td><a href="my-assignments/js-dom-lecture-activity/index.html">JS DOM Lecture Activity</a></td>
+            </tr>
+            <tr>
+              <td><a href="colors.html">Colors</a></td>
+              <td><a href="my-assignments/js-fundamentals-template/index.html">JS Fundamentals</a></td>
+              <td><a href="my-assignments/lms/index.html">JS LMS Exercise 1</a></td>
+            </tr>
+            <tr>
+              <td><a href="my-assignments/css-exercise-1-template/index.html">Brownies</a></td>
+              <td><a href="my-assignments/calculator/index.html">JS Calculator Exercise 1</a></td>
+              <td><a href=""></a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="module">
+          <h3>Module 2</h3>
+          <table>
+            <tr>
+              <td>Week ?</td>
+              <td>Week ?</td>
+              <td>Week ?</td>
+            </tr>
+            <tr>
+              <td>wip</td>
+              <td>wip</td>
+              <td>wip</td>
+            </tr>
+            <tr>
+              <td>wip</td>
+              <td>wip</td>
+              <td>wip</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <div w3-include-html="components/footer.html"></div>
+  </body>
+  <script src="scripts/HTMLInclude.js"></script>
 </html>
