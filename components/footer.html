@@ -1,5 +1,5 @@
 <footer>
-  <a id="validation-1" class="validation" target="blank" href="https://validator.w3.org/check?uri=referer"><img src="/images/button_validation_html5.png" alt=""></a>
+  <a id="validation-1" class="validation" target="_blank" href="https://validator.w3.org/check?uri="><img src="/images/button_validation_html5.png" alt=""></a>
   <nav>
     <a href="https://github.com/tvander5">Github</a>
     <a href="https://tvander5.github.io/">Github.io</a>
@@ -9,6 +9,11 @@
     <a href="https://www.codecademy.com/profiles/tvander5">Codecademy</a>
     <a href="https://www.linkedin.com/in/tony-vanderhall">LinkedIn</a>
   </nav>
-  <a id="validation-2" class="validation" target="blank" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="/images/button_validation_css.png" alt=""></a>
+  <a id="validation-2" class="validation" target="_blank" href="https://jigsaw.w3.org/css-validator/check/"><img src="/images/button_validation_css.png" alt=""></a>
   <p>Designed by <a href="#">vanderhallstech.com</a></p>
+
+  <script>
+    document.getElementById("validation-1").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation-2").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+  </script>
 </footer>
