@@ -61,7 +61,7 @@
 /* For smaller screens */
 @media (max-width:1100px) {
   .website-info ul {
-    width: 60vh;
+    width: 80vh;
   }
   
   .website-info ul li {
