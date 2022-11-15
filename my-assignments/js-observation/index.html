@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/general.css">
+        <link rel="stylesheet" href="/styles/general-assignments.css">
+        <link rel="stylesheet" href="/styles/headerfooter.css">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Observation Exercise</title>
+    </head>
+    <body>
+        <div w3-include-html="/components/header.html"></div>
+        <h2 class="website-title">Observation Exercise</h2>
+        <div class="website-info">
+            <div>
+                <input type="textfield" id = "tileNumberInput" placeholder="Enter the number of tiles">
+                <input type="button" id = "buttonStart" value="Start">
+                <p id="timer"></p>
+            </div>
+            <h1 style="text-align:center;" id="win"> </h1>
+            <div id="buttons">
+            </div>
+            <section id='menu'></section>
+            <p id="results"></p>
+        </div>
+        <div w3-include-html="/components/footer.html"></div>
+        <script src="/scripts/HTMLinclude.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

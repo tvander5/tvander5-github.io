@@ -1,0 +1,47 @@
+button{
+    background-color: rgb(27,62,119);
+    color: white;
+    font-weight: 700;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(48, 141, 188);
+    box-shadow: 0px 0px 10px rgb(0,0,0,.5);
+}
+
+.selected-tile {
+    background-color: lime;
+}
+
+.selected-tile:hover {
+    background-color: rgb(110, 255, 110);
+}
+
+
+#buttons{
+    margin: auto;
+    display: grid;
+    column-gap: 2px;
+    row-gap: 2px;
+    padding: 50px;
+    justify-content: center;
+    grid-template-columns: repeat(5, 50px);
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1rem;
+    row-gap:1rem;
+    justify-content: center;
+    margin: auto
+}
+
+.tileStyle{
+
+ text-align:center;
+ height: 5rem;
+}
