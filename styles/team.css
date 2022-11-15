@@ -46,6 +46,10 @@
   pointer-events: none;
 }
 
+.team-card:hover {
+  cursor: pointer;
+}
+
 .team-card:hover p {
   background-color: rgba(0,0,0,.8);;
   height: 50px;
