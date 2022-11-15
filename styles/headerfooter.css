@@ -16,9 +16,22 @@ header {
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  color: rgb(225, 225, 225);
+  font-size: 1.5em;
+  font-weight:100;
+  text-transform: uppercase;
+}
+
+.logo a {
   background: rgb(255, 109, 109);
   background: linear-gradient(to right, rgb(255, 154, 87),rgb(255, 109, 109));
-  color: #fff;
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -122,12 +135,15 @@ footer p a {
   header {
     flex-direction: column;
     justify-content: center;
-    height: 80px;
+    height: 90px;
   }
   .logo {
     padding-left: 0;
     font-size: 1em;
     padding: 10px 0;
+  }
+  .logo p {
+    font-size: .8em;
   }
   .navbar {
     padding-right: 0;
