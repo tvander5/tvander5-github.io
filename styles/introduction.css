@@ -49,6 +49,7 @@
 .website-info ul li {
   line-height: 1.5em;
   padding-bottom: .5em;
+  font-size: 1.25em;
 }
 
 .website-info ul li a {
@@ -58,7 +59,7 @@
 }
 
 /* For smaller screens */
-@media (max-width:700px) {
+@media (max-width:850px) {
   .website-info ul {
     width: 60vh;
   }
@@ -75,14 +76,15 @@
 }
 
 /* For smaller screens */
-@media (max-width:400px) {
+@media (max-width:700px) {
   .website-info ul {
-    width: 40vh;
+    width: 70vw;
   }
   .website-info ul li {
-    line-height: 1.8em;
+    line-height: 1.1em;
     padding-bottom: .5em;
-    font-size: 1.1em;
+    font-size: 1em;
+
   }
 
   .my-bio figcaption {
@@ -90,7 +92,7 @@
   }
 
   .my-bio img {
-    width: 200px;
-    height: 200px;
+    width: 70vw;
+    height: 70vw;
   }
 }

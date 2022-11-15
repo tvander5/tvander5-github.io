@@ -82,21 +82,21 @@
 @media (max-width:400px) {
   .team {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 2.5px;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
     column-gap: 5px;
   }
   
   .team-card img {
-    width: 75px;
-    height: 75px;
+    width: 80vw;
+    height: 80vw;
     object-fit: cover;
     object-position: center;
   }
 
   .team-card p {
-    font-size: .8em;
-    height: 30px;
+    font-size: 2em;
+    height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
