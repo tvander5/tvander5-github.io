@@ -150,3 +150,21 @@ footer p a {
     display: none;
   }
 }
+
+/* For smaller screens */
+@media (max-width:400px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+  }
+
+  footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  footer {
+    height: 70px;
+  }
+}

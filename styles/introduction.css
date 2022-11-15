@@ -15,6 +15,10 @@
 .my-bio {
   width: 300px;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .my-bio img {
@@ -67,5 +71,26 @@
 
   .my-bio figcaption {
     font-size: 1.2em;
+  }
+}
+
+/* For smaller screens */
+@media (max-width:400px) {
+  .website-info ul {
+    width: 40vh;
+  }
+  .website-info ul li {
+    line-height: 1.8em;
+    padding-bottom: .5em;
+    font-size: 1.1em;
+  }
+
+  .my-bio figcaption {
+    font-size: 1.2em;
+  }
+
+  .my-bio img {
+    width: 200px;
+    height: 200px;
   }
 }

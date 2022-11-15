@@ -77,3 +77,27 @@
   }
   
 }
+
+/* For smaller screens */
+@media (max-width:400px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2.5px;
+    column-gap: 5px;
+  }
+  
+  .team-card img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .team-card p {
+    font-size: .8em;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -97,12 +97,12 @@
     flex-direction: column;
   }
   .info-card {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
   .steps {
     padding-top: 20px;
-    width: 350px;
+    width: 200px;
   }
   .steps li {
     font-size: 1.1em;
