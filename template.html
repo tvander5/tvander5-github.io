@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/general-assignments.css">
-    <link rel="stylesheet" href="/styles/headerfooter.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Tony Vanderhall's Talkative Vulture : Template</title>
+    <div data-replace="%name%:Template" data-include="/components/general_head.html"></div>
     </head>
     <body>
-        <div w3-include-html="/components/header.html"></div>
+        <div data-include="/components/header.html"></div>
         <h2 class="website-title">Header</h2>
         <div class="website-info">
 
         </div>
-        <div w3-include-html="/components/footer.html"></div>
+        <div data-include="/components/footer.html"></div>
         <script src="/scripts/HTMLinclude.js"></script>
         <script src="/scripts/general.js"></script>
     </body>

@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/general-assignments.css">
-        <link rel="stylesheet" href="styles/headerfooter.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Tony Vanderhall's Talkative Vulture : Learning About Colors</title>
+        <div data-replace="%name%:Learning About Colors" data-include="/components/general_head.html"></div>
     </head>
     <body>
-        <div w3-include-html="/components/header.html"></div>
-        <h2 class="website-title">Learning About ColorS</h2>
+        <div data-include="/components/header.html"></div>
+        <h2 class="website-title">Learning About Colors</h2>
         <div class="website-info">
             <p>Allows you to tell which primary colors were mixed to together.</p>
 
+            <h4>Primary Colors</h4>
             <p>Primary colors are colors that cannot be mixed from other colors.</p>
             <table>
                 <tr>
@@ -27,7 +25,7 @@
                 </tr>
             </table>
 
-            <h4>Color Table</h4>
+            <h4>Secondary Colors</h4>
             <p>Secondary colors are colors that can be mixed from other colors.</p>
             <table>
                 <tr>
@@ -51,8 +49,9 @@
                     <td class="green">Green</td>
                 </tr>
             </table>
+            <p>I could improve this table by organizing the colors better and making it more obvious what each section of the table does.</p>
         </div>
-        <div w3-include-html="/components/footer.html"></div>
+        <div data-include="/components/footer.html"></div>
         <script src="/scripts/HTMLinclude.js"></script>
         <script src="/scripts/general.js"></script>
     </body>

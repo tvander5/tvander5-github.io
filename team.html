@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/team.css">
-    <link rel="stylesheet" href="styles/headerfooter.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Tony Vanderhall Talkative Vulture : Team</title>
+    <div data-replace="%name%:Team" data-include="/components/general_head.html"></div>
+
   </head>
   <body>
-    <div w3-include-html="/components/header.html"></div>
+    <div data-include="/components/header.html"></div>
     <main>
       <h2 class="website-title">Team</h2>
       <div class="website-info">
@@ -52,7 +50,7 @@
         </div>
       </div>
     </main>
-    <div w3-include-html="/components/footer.html"></div>
+    <div data-include="/components/footer.html"></div>
     <script src="/scripts/HTMLinclude.js"></script>
     <script src="scripts/team.js"></script>
     <script src="/scripts/general.js"></script>
