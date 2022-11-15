@@ -152,7 +152,7 @@ footer p a {
 }
 
 /* For smaller screens */
-@media (max-width:600px) {
+@media (max-width:800px) {
   .navbar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -162,6 +162,7 @@ footer p a {
   footer nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.2em;
   }
 
   footer {

@@ -72,23 +72,23 @@
 }
 
 /* For smaller screens */
-@media (max-width:1100px) {
+@media (max-width:1000px) {
   .website-info {
     width: 70%;
   }
   .info-card {
-    width: 400px;
-    height: 400px;
+    width: 40vw;
+    height: 40vw;
 
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 40vw;
+    min-height: 40vw;
   }
   .steps {
-    width: 400px;
-    height: 400px;
+    width: 30vw;
+    height: 30vw;
 
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 30vw;
+    min-height: 30vw;
   }
   .steps li {
     font-size: .9em;
