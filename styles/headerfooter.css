@@ -120,22 +120,27 @@ footer p a {
 /* For smaller screens */
 @media (max-width:1000px) {
   header {
+    flex-direction: column;
     justify-content: center;
+    height: 80px;
   }
   .logo {
-    display: none;
     padding-left: 0;
+    font-size: 1em;
+    padding: 10px 0;
   }
   .navbar {
     padding-right: 0;
   }
 
   footer {
-    height: 30px;
+    height: 60px;
   }
 
   footer nav {
-    column-gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
     height: 100%;
   }
 
@@ -148,24 +153,5 @@ footer p a {
   }
   .validation {
     display: none;
-  }
-}
-
-/* For smaller screens */
-@media (max-width:800px) {
-  .navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
-  }
-
-  footer nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 1.2em;
-  }
-
-  footer {
-    height: 70px;
   }
 }
