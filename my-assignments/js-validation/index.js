@@ -60,7 +60,7 @@ function getFormErrors(inputArray) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
-    } else if (classList.contains("required")) {
+    } else {
       if (classList.contains("numeric") && !isNumeric(text)) {
         // Field is not numeric
         inputErrors.push([index,"Numeric field must be a series of numbers."])
