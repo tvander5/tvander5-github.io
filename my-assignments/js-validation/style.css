@@ -1,0 +1,23 @@
+
+.container {
+  color: black;
+}
+
+.container .card-title {
+  color: white;
+}
+
+.errors {
+  color: red;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.errors span {
+  color: darkred;
+}
+
+.container input[type="submit"] {
+  margin-top: 5px;
+  padding: 2px 10px;
+}

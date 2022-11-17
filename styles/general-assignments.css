@@ -10,41 +10,6 @@
   font-size: 1.2em;
 }
 
-/*
-.colors {
-  color: rgb(235, 235, 235);
-  text-transform: uppercase;
-  font-size: .9em;
-  line-height: 1.5em;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-
-  width: 30%;
-  margin: auto;
-  text-align: center;
-  background-color: black;
-}
-
-.colors tr {
-  border: solid 1px RED;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.colors tr td {
-  border: solid 1px RED;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-*/
 
 table {
   width: 100%;
@@ -59,7 +24,7 @@ table tr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border-bottom: solid 1px rgb(255,255,255,.2);
-  text-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+  text-shadow: 0px 0px 5px rgba(255,255,255,0.2);
 }
 
 table tr:nth-child(1) {
@@ -119,31 +84,31 @@ table tr td a:hover {
 
 
 .green {
-  color: limegreen;
+  color: rgb(92, 255, 92);
 }
 
 .blue {
-  color: blue;
+  color: rgb(116, 116, 255);
 }
 
 .red {
-  color: red;
+  color: rgb(255, 88, 88);
 }
 
 .yellow {
-  color: yellow;
+  color: rgb(255, 255, 113);
 }
 
 .cyan {
-  color: cyan;
+  color: rgb(96, 255, 255);
 }
 
 .orange {
-  color: orange;
+  color: rgb(255, 192, 76);
 }
 
 .purple {
-  color: magenta;
+  color: rgb(255, 86, 255);
 }
 
 .calculator {
