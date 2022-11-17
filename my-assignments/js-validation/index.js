@@ -45,7 +45,6 @@ function getFormErrors(inputArray) {
 
     let errCount = inputErrors.length
     // Log errors
-    console.log(classList, text.length, minLength)
     if (classList.contains("required") && text.length <= 0) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
