@@ -51,26 +51,26 @@ function getFormErrors(inputArray) {
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
     } else if (classList.contains("required") || classList.contains("required_size") || text.length > 0) {
-      if (classList.contains("required_size") && text.length < minLength) {
-        // Field does not have enough characters
-        inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
-        input.placeholder = "x >= " + String(minLength)
+      if (classList.contains("numeric") && !isNumeric(text)) {
+        // Field is not numeric
+        inputErrors.push([index,"Numeric field must be a series of numbers."])
+        input.placeholder = "123.."
       } else if (classList.contains("alphabetic") && !isAlphabetic(text)) {
         // Field is not alphabetic
         inputErrors.push([index,"Alphabetic fields must be a series of alphabetic characters."])
         input.placeholder = "abc.."
-      } else if (classList.contains("numeric") && !isNumeric(text)) {
-        // Field is not numeric
-        inputErrors.push([index,"Numeric field must be a series of numbers."])
-        input.placeholder = "123.."
-      } else if (classList.contains("username") && text.length < 8){
-        // Username is not at least 8 characters
-        inputErrors.push([index,"Username fields must contain at least 8 characters."])
-        input.placeholder = "x >= 8"
       } else if (classList.contains("username") && !isAlphanumeric(text)){
         // Username is not alphanumeric
         inputErrors.push([index,"Username fields must contain only alphanumeric characters."])
         input.placeholder = "abc123.."
+      } else if (classList.contains("username") && (text.length < 8 || text.length < minLength)){
+        // Username is not at least 8 characters
+        inputErrors.push([index,"Username fields must contain at least 8 characters."])
+        input.placeholder = "x >= 8"
+      } else if (classList.contains("required_size") && text.length < minLength) {
+        // Field does not have enough characters
+        inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
+        input.placeholder = "x >= " + String(minLength)
       } else if (classList.contains("date") && !isDate(text)){
         // Date does not have the correct format
         inputErrors.push([index,"Date fields must match the format of XX/XX/XXXX."])
