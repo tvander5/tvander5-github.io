@@ -23,6 +23,16 @@ function isPhoneNumber(str) {
   if (typeof str != "string") return false 
   return /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(str)
 }
+
+// this one is mine
+function isPassword(str) {
+  if (typeof str != "string") return false
+  let hasUpper = str.toLowerCase() != str;
+  let hasNumber = /\d/.test(str);
+  let hasSpecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(str);
+
+  return (hasUpper || hasNumber || hasSpecial);
+}
 // End helper
 
 // Get the errors from desired form
@@ -71,6 +81,10 @@ function getFormErrors(inputArray) {
         // Field does not have enough characters
         inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
         input.placeholder = "x >= " + String(minLength)
+      } else if (classList.contains("password") && !isPassword(text)){
+        // Password does not have the correct requirements
+        inputErrors.push([index,"Password fields must contain one or more of each of the following types: uppercase letters, lowercase letters, numbers, special characters."])
+        input.placeholder = "password101"
       } else if (classList.contains("date") && !isDate(text)){
         // Date does not have the correct format
         inputErrors.push([index,"Date fields must match the format of XX/XX/XXXX."])
@@ -116,6 +130,7 @@ containers.forEach(element => {
     // If there is a submit button
     if (submit) {
       const onClick = (event)=> {
+        event.preventDefault()
         // Check for errors on submit
         let inputErrors = getFormErrors(otherInputs);
 
