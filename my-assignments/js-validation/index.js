@@ -51,7 +51,7 @@ function getFormErrors(inputArray) {
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
     } else if (classList.contains("required") || classList.contains("required_size") || text.length > 0) {
-      if (text.length < minLength) {
+      if (classList.contains("required_size") && text.length < minLength) {
         // Field does not have enough characters
         inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
         input.placeholder = "x >= " + String(minLength)
