@@ -126,21 +126,26 @@ containers.forEach(element => {
 
             // Get the first field that had an error
             let errName = String(err[0]+1)
-            let errMsg = "<span class=\"errorItem\">["+errName+"]</span> "
+
+            // Create an error message
+            // The spans are just for css
+            let errMsg = "<span class=\"errorItem\">[ FIELD "+errName+" ]</span> "
             errMsg += err[1]
 
             // Check if their are more errors
             if (inputErrors.length > 1) {
-              errMsg += " <span>[and " + (inputErrors.length-1)
+              errMsg += " <span>[ and " + (inputErrors.length-1)
               if (inputErrors.length > 2) {
-                errMsg += " more errors].</span>"
+                errMsg += " more errors ].</span>"
               } else {
-                errMsg += " more error].</span>"
+                errMsg += " more error ].</span>"
               }
             }
 
             // Display the error message
             errorDiv.innerHTML = "<div>"+errMsg+"</div>"
+
+            // Don't allow refresh if their are errors
             event.preventDefault()
           }
         }
