@@ -110,7 +110,7 @@ containers.forEach(element => {
 
     // If there is a submit button
     if (submit) {
-      let onClick = (event)=>{
+      const onClick = (event)=>{
         // Check for errors on submit
         let inputErrors = getFormErrors(otherInputs);
 
