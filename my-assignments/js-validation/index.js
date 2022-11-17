@@ -136,9 +136,9 @@ containers.forEach(element => {
             if (inputErrors.length > 1) {
               errMsg += " <span>[ and " + (inputErrors.length-1)
               if (inputErrors.length > 2) {
-                errMsg += " more errors ].</span>"
+                errMsg += " more errors ]</span>"
               } else {
-                errMsg += " more error ].</span>"
+                errMsg += " more error ]</span>"
               }
             }
 
