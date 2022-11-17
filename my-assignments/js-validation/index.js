@@ -56,12 +56,11 @@ function getFormErrors(inputArray) {
 
     let errCount = inputErrors.length
     // Log errors
-    if (classList.contains("required") && text.length <= 0) {
+    if ((classList.contains("required") || classList.contains("required_size")) && text.length <= 0) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
-    }
-    if (classList.contains("required") || classList.contains("required_size")) {
+    } else if (classList.contains("required") || classList.contains("required_size")) {
       if (classList.contains("numeric") && !isNumeric(text)) {
         // Field is not numeric
         inputErrors.push([index,"Numeric field must be a series of numbers."])
