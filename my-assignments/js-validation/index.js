@@ -36,6 +36,7 @@ function getFormErrors(inputArray) {
     // whitespace
     let text = String(input.value).trim()
     let minLength = input.getAttribute("minlength")
+
     if (minLength == null) {
       minLength = -1
     } else {
@@ -114,7 +115,7 @@ containers.forEach(element => {
 
     // If there is a submit button
     if (submit) {
-      const onClick = (event)=>{
+      const onClick = (event)=> {
         // Check for errors on submit
         let inputErrors = getFormErrors(otherInputs);
 
