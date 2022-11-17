@@ -1,35 +1,31 @@
 const containers = document.querySelectorAll(".container")
 
-// From stack overflow
+// Helper functions from stack overflow
 function isAlphabetic(str) {
   if (typeof str != "string") return false
   return /^[a-zA-Z]+$/.test(str);
 }
 
-// From stack overflow
 function isNumeric(str) {
   if (typeof str != "string") return false 
   return /^\d+$/.test(str);
 }
 
-// From stack overflow
 function isAlphanumeric(str) {
   if (typeof str != "string") return false 
   return /^[a-z0-9]+$/gi.test(str);
 }
-
-// From stack overflow
 
 function isDate(str) {
   if (typeof str != "string") return false 
   return /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(str)
 }
 
-// From stack overflow
 function isPhoneNumber(str) {
   if (typeof str != "string") return false 
   return /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(str)
 }
+// End helper
 
 // Get the errors from desired form
 function getFormErrors(inputArray) {
@@ -47,29 +43,37 @@ function getFormErrors(inputArray) {
     let errCount = inputErrors.length
     // Log errors
     if (classList.contains("required") && text.length <= 0) {
+      // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
     } else if (classList.contains("required") || text.length > 0) {
       text = text.trim()
       if (text.length < minLength) {
+        // Field does not have enough characters
         inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
         input.placeholder = "x >= " + String(minLength)
       } else if (classList.contains("alphabetic") && !isAlphabetic(text)) {
+        // Field is not alphabetic
         inputErrors.push([index,"Alphabetic fields must be a series of alphabetic characters."])
         input.placeholder = "abc.."
       } else if (classList.contains("numeric") && !isNumeric(text)) {
+        // Field is not numeric
         inputErrors.push([index,"Numeric field must be a series of numbers."])
         input.placeholder = "123.."
       } else if (classList.contains("username") && text.length < 8){
+        // Username is not at least 8 characters
         inputErrors.push([index,"Username fields must contain at least 8 characters."])
         input.placeholder = "x >= 8"
       } else if (classList.contains("username") && !isAlphanumeric(text)){
+        // Username is not alphanumeric
         inputErrors.push([index,"Username fields must contain only alphanumeric characters."])
         input.placeholder = "abc123.."
       } else if (classList.contains("date") && !isDate(text)){
+        // Date does not have the correct format
         inputErrors.push([index,"Date fields must match the format of XX/XX/XXXX."])
         input.placeholder = "xx/xx/xxxx"
       } else if (classList.contains("phone") && !isPhoneNumber(text)){
+        // Phone number does not have the correct format
         inputErrors.push([index,"Phone fields must match the format of XXX-XXX-XXXX."])
         input.placeholder = "xxx-xxx-xxxx"
       }
@@ -96,7 +100,7 @@ containers.forEach(element => {
   // Check if the container has a form
   if (form) {
     let inputs = form.querySelectorAll("input")
-    let otherInputs = []
+    let otherInputs = [] // Everything but the submit button
     let submit
 
     // Locate submit button
@@ -141,6 +145,8 @@ containers.forEach(element => {
           }
         }
       }
+
+      // Add submit listener
       submit.addEventListener("click", onClick)
     }
   }
