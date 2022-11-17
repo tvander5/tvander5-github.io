@@ -7,12 +7,10 @@ function isAlphabetic(str) {
 }
 
 function isNumeric(str) {
-  if (typeof str != "string") return false 
   return /^\d+$/.test(str);
 }
 
 function isAlphanumeric(str) {
-  if (typeof str != "string") return false 
   return /^[a-z0-9]+$/gi.test(str);
 }
 
@@ -36,18 +34,23 @@ function getFormErrors(inputArray) {
   inputArray.forEach((input, index) => {
     // Trim the string to get rid of extra
     // whitespace
-    let text = String(input.value)
-    let minLength = input.minLength
+    let text = String(input.value).trim()
+    let minLength = input.getAttribute("minlength")
+    if (minLength == null) {
+      minLength = -1
+    } else {
+      minLength = Number(minLength)
+    }
     let classList = input.classList
 
     let errCount = inputErrors.length
     // Log errors
+    console.log(classList, text.length, minLength)
     if (classList.contains("required") && text.length <= 0) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
-    } else if (classList.contains("required") || text.length > 0) {
-      text = text.trim()
+    } else if (classList.contains("required") || classList.contains("required_size") || text.length > 0) {
       if (text.length < minLength) {
         // Field does not have enough characters
         inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
@@ -81,9 +84,7 @@ function getFormErrors(inputArray) {
 
     // New errors were added
     if (errCount !== inputErrors.length) {
-      // This is just to make it obvious which input
-      // is throwing an error (mainly for debugging)
-      // purposes.
+      // Empty the field so the placeholder will show
       input.value = ""
     }
   })
@@ -121,35 +122,22 @@ containers.forEach(element => {
         // If no errors
         if (inputErrors.length > 0) {
           if (errorDiv) {
-            // Log each error
-            let err = inputErrors[0]
-
-            // Get the first field that had an error
-            let errName = String(err[0]+1)
 
             // Create an error message
-            // The spans are just for css
-            let errMsg = "<span class=\"errorItem\">[ FIELD "+errName+" ]</span> "
-            errMsg += err[1]
-
-            // Check if their are more errors
-            if (inputErrors.length > 1) {
-              errMsg += " <span>[ and " + (inputErrors.length-1)
-              if (inputErrors.length > 2) {
-                errMsg += " more errors ]</span>"
-              } else {
-                errMsg += " more error ]</span>"
-              }
-            }
+            let errMsg = ""
+            inputErrors.forEach(err => {
+              errMsg +="<li>"+err[1]+"</li>"
+            });
 
             // Display the error message
-            errorDiv.innerHTML = "<div>"+errMsg+"</div>"
+            errorDiv.innerHTML = "<ul>"+errMsg+"</ul>"
 
             // Don't allow refresh if their are errors
             event.preventDefault()
           }
         }
       }
+
 
       // Add submit listener
       submit.addEventListener("click", onClick)
