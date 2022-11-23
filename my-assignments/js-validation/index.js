@@ -56,7 +56,7 @@ function getFormErrors(inputArray) {
 
     let errCount = inputErrors.length
     // Log errors
-    if ((classList.contains("required") || classList.contains("required_size")) && text.length <= 0) {
+    if ((classList.contains("required") && !classList.contains("required_size")) && text.length == 0) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
