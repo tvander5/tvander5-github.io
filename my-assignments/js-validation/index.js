@@ -1,4 +1,3 @@
-const containers = document.querySelectorAll(".container")
 
 // Helper functions from stack overflow
 function isAlphabetic(str) {
@@ -41,26 +40,26 @@ function getFormErrors(inputArray) {
 
   // Check to make sure each input has the
   // required data to submit
-  inputArray.forEach((input, index) => {
+  function AddError(input, index) {
     // Trim the string to get rid of extra
     // whitespace
     let text = String(input.value).trim()
     let minLength = input.getAttribute("minlength")
 
-    if (minLength == null) {
-      minLength = -1
-    } else {
-      minLength = Number(minLength)
-    }
     let classList = input.classList
 
     let errCount = inputErrors.length
+
     // Log errors
     if ((classList.contains("required") && !classList.contains("required_size")) && text.length == 0) {
       // Required field was left blank
       inputErrors.push([index, "Required fields must have a value that is not empty or whitespace."])
       input.placeholder = "required.."
-    } else {
+    } else if (classList.contains("required_size") && text.length != minLength) {
+      // Field does not have enough characters
+      inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
+      input.placeholder = "x >= " + String(minLength)
+    } else if (classList.contains("required") || text.length > 0) {
       if (classList.contains("numeric") && !isNumeric(text)) {
         // Field is not numeric
         inputErrors.push([index,"Numeric field must be a series of numbers."])
@@ -76,15 +75,10 @@ function getFormErrors(inputArray) {
         inputErrors.push([index,"Username fields must contain only alphanumeric characters."])
         input.placeholder = "abc123.."
       }
-      if (classList.contains("username") && (text.length < 8 || text.length < minLength)){
+      if (classList.contains("username") && (text.length < 8)){
         // Username is not at least 8 characters
         inputErrors.push([index,"Username fields must contain at least 8 characters."])
         input.placeholder = "x >= 8"
-      }
-      if (classList.contains("required_size") && text.length < minLength) {
-        // Field does not have enough characters
-        inputErrors.push([index,"Required_size field lengths must exactly match the minlength attribute of that field."])
-        input.placeholder = "x >= " + String(minLength)
       }
       if (classList.contains("password") && !isPassword(text)){
         // Password does not have the correct requirements
@@ -108,61 +102,59 @@ function getFormErrors(inputArray) {
       // Empty the field so the placeholder will show
       input.value = ""
     }
-  })
+  }
+  inputArray.forEach(AddError);
 
   return inputErrors
 }
 
 // Go through each container element (if there aren't
 // any, nothing will happen)
-containers.forEach(element => {
-  const form = element.querySelector("form")
-  const errorDiv = element.querySelector(".errors")
 
-  // Check if the container has a form
-  if (form) {
-    let inputs = form.querySelectorAll("input")
-    let otherInputs = [] // Everything but the submit button
-    let submit
+const forms = document.querySelectorAll("form")
 
-    // Locate submit button
-    inputs.forEach(input => {
-      if (input.type == "submit") {
-        submit = input
-      } else {
-        otherInputs.push(input)
-      }
-    });
+function GenerateListeners(form) {
+  const errorDiv = form.parentElement.querySelector(".errors")
+  let inputs = form.querySelectorAll("input")
+  let otherInputs = [] // Everything but the submit button
+  let submit
 
-    // If there is a submit button
-    if (submit) {
-      const onClick = (event)=> {
-        //event.preventDefault()
-        // Check for errors on submit
-        let inputErrors = getFormErrors(otherInputs);
+  // Locate submit button
+  inputs.forEach(input => {
+    if (input.type == "submit") {
+      submit = input
+    } else {
+      otherInputs.push(input)
+    }
+  });
 
-        // If no errors
-        if (inputErrors.length > 0) {
-          if (errorDiv) {
+  // If there is a submit button
+  if (submit) {
+    const onClick = (event)=> {
+      // Check for errors on submit
+      let inputErrors = getFormErrors(otherInputs);
 
-            // Create an error message
-            let errMsg = ""
-            inputErrors.forEach(err => {
-              errMsg +="<li>"+err[1]+"</li>"
-            });
+      // If no errors
+      if (inputErrors.length > 0) {
+        if (errorDiv) {
 
-            // Display the error message
-            errorDiv.innerHTML = "<ul>"+errMsg+"</ul>"
+          // Create an error message
+          let errMsg = ""
+          inputErrors.forEach(err => {
+            errMsg +="<li>"+err[1]+"</li>"
+          });
 
-            // Don't allow refresh if their are errors
-            event.preventDefault()
-          }
+          // Display the error message
+          errorDiv.innerHTML = "<ul>"+errMsg+"</ul>"
+
+          // Don't allow refresh if their are errors
+          event.preventDefault()
         }
       }
-
-
-      // Add submit listener
-      submit.addEventListener("click", onClick)
     }
+    // Add submit listener
+    submit.addEventListener("click", onClick)
   }
-});
+}
+
+forms.forEach(GenerateListeners)
